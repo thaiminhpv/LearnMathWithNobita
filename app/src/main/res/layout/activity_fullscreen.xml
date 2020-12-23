@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullscreen_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="1 x 2 = "/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/answer"
+                android:layout_width="wrap_content"
+                android:minWidth="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionGo"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="30dp"
+            android:text="kiểm tra kết quả"
+            android:layout_marginBottom="150dp"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:text="0"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"/>
+
+        <RadioGroup
+            android:id="@+id/modeSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="2 x 1"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:paddingStart="5dp"
+                android:text="2 x 2"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="3 x 2"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <!--        <com.google.android.material.switchmaterial.SwitchMaterial-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_below="@+id/score"-->
+<!--            android:layout_marginTop="70dp"-->
+<!--            android:checked="false"-->
+<!--            android:onClick="toggleButtonHandler"/>-->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Mode"
+            android:layout_below="@id/score"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:fitsSystemWindows="true">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/fullscreen_content_controls"-->
+    <!--            style="?metaButtonBarStyle"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="bottom|center_horizontal"-->
+    <!--            android:background="@color/black_overlay"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            tools:ignore="UselessParent">-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/dummy_button"-->
+    <!--                style="?metaButtonBarButtonStyle"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:text="@string/dummy_button" />-->
+
+    <!--        </LinearLayout>-->
+    <!--    </FrameLayout>-->
+
+</FrameLayout>
